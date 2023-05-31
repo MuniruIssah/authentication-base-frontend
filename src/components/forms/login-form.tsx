@@ -1,5 +1,6 @@
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { Link } from 'react-router-dom';
 import { LoginFormData, loginSchema } from '../../types/schemas';
 import Input from '../input';
 
@@ -28,7 +29,15 @@ const LoginForm = () => {
         required
       />
       <p>{errors.password?.message}</p>
-
+      <div className="text-sm">
+        <span className="font-extralight text-gray-600">
+          Dont have an account?
+        </span>
+        {' '}
+        <Link to="/register" className="btn-link">
+          Register
+        </Link>
+      </div>
       <input type="submit" className="btn btn-primary" />
     </form>
   );

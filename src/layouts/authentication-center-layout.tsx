@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 
 const AuthenticationCenterLayout = ({ children }: PropsWithChildren) => (
   <div className="w-screen min-h-screen flex items-center justify-center p-6 md:p-0 authentication">

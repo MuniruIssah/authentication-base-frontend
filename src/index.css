@@ -21,7 +21,12 @@
   background: -webkit-linear-gradient(90deg, hsla(283, 83%, 86%, 1) 0%, hsla(105, 11%, 85%, 1) 100%);
 
 }
-
+.authenticationII{
+  background: hsla(46, 93%, 89%, 1);
+  background: linear-gradient(90deg, hsla(46, 93%, 89%, 1) 0%, hsla(342, 83%, 38%, 1) 100%);
+  background: -moz-linear-gradient(90deg, hsla(46, 93%, 89%, 1) 0%, hsla(342, 83%, 38%, 1) 100%);
+  background: -webkit-linear-gradient(90deg, hsla(46, 93%, 89%, 1) 0%, hsla(342, 83%, 38%, 1) 100%);
+}
 .btn{
   @apply py-2.5 rounded text-base text-center
 }

@@ -1,4 +1,3 @@
-import React from 'react';
 import AuthenticationCenterLayout from '../../layouts/authentication-center-layout';
 import LoginForm from '../../components/forms/login-form';
 
