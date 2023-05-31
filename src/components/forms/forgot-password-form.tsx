@@ -1,19 +1,21 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { LoginFormData, loginSchema } from '../../types/schemas';
+import {
+  ForgotPasswordFormData,
+  forgotPasswordSchema,
+} from '../../types/schemas';
 import Input from '../input';
 
-const LoginForm = () => {
+const ForgotPasswordForm = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<LoginFormData>({
-    resolver: yupResolver(loginSchema),
+  } = useForm<ForgotPasswordFormData>({
+    resolver: yupResolver(forgotPasswordSchema),
   });
-  const onSubmit = (data: LoginFormData) => alert(JSON.stringify(data));
-
+  const onSubmit = (data: ForgotPasswordFormData) => alert(JSON.stringify(data));
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
@@ -21,18 +23,9 @@ const LoginForm = () => {
     >
       <Input type="email" label="email" {...register('email')} required />
       <p>{errors.email?.message}</p>
-
-      <Input
-        type="password"
-        label="password"
-        {...register('password')}
-        required
-      />
-      <p>{errors.password?.message}</p>
-
       <input type="submit" className="btn btn-primary" />
     </form>
   );
 };
 
-export default LoginForm;
+export default ForgotPasswordForm;

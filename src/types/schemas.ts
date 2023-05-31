@@ -7,4 +7,11 @@ export const loginSchema = yup
   })
   .required();
 
+export const forgotPasswordSchema = yup
+  .object({
+    email: yup.string().required(),
+  })
+  .required();
+
 export type LoginFormData = yup.InferType<typeof loginSchema>;
+export type ForgotPasswordFormData = yup.InferType<typeof forgotPasswordSchema>;
